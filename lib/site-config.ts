@@ -21,4 +21,5 @@ export const profileConfig = {
   linkedIn: "https://linkedin.com/",
   whatsapp: "https://wa.me/+62",
   cvPath: "/cv-arka-satria.pdf",
-} as const;
+}  as const;
+

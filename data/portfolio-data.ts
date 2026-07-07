@@ -15,6 +15,7 @@ export interface ProjectItem {
   type: LocalizedText;
   description: LocalizedText;
   stack: string[];
+  github: string;
 }
 
 export interface ExperienceItem {
@@ -57,6 +58,7 @@ export const projects: ProjectItem[] = [
       id: "Platform inventori yang andal dengan pelacakan stok real-time, akses berbasis peran, otomatisasi alur pembelian, dan dashboard laporan.",
     },
     stack: ["Laravel", "PHP", "MySQL"],
+    github: "https://github.com/4rka5/Stockify",
   },
   {
     title: "UKK",
@@ -69,6 +71,7 @@ export const projects: ProjectItem[] = [
       id: "Sistem operasional sekolah yang lengkap untuk administrasi akademik, kehadiran, data siswa, dan manajemen alur kerja guru.",
     },
     stack: ["Laravel", "PHP", "MySQL"],
+    github: "https://github.com/4rka5/UKK",
   },
   {
     title: "Cars Arena",
@@ -81,6 +84,7 @@ export const projects: ProjectItem[] = [
       id: "Pengalaman marketplace modern untuk menelusuri, memfilter, dan memasang listing mobil dengan fitur lead generation dan profil dealer.",
     },
     stack: ["Laravel", "PHP", "MySQL"],
+    github: "https://github.com/4rka5/Cars-Arena",
   },
 ];
 

@@ -300,11 +300,11 @@ export function PortfolioPage() {
 
             <div className="stats-grid">
               <article className="glass-card stat-card">
-                <strong>25+</strong>
+                <strong>10+</strong>
                 <span>{t.about.statProjects}</span>
               </article>
               <article className="glass-card stat-card">
-                <strong>20+</strong>
+                <strong>5+</strong>
                 <span>{t.about.statTech}</span>
               </article>
               <article className="glass-card stat-card">
@@ -382,7 +382,7 @@ export function PortfolioPage() {
 
                   <div className="project-actions">
                     <a
-                      href={profileConfig.github}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
