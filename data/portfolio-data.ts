@@ -19,6 +19,7 @@ export interface ProjectFeatureItem {
 export interface ProjectItem {
   slug: string;
   title: string;
+  status: "completed" | "in-development";
   type: LocalizedText;
   description: LocalizedText;
   overview: LocalizedText;
@@ -45,9 +46,9 @@ export interface CertificateItem {
 
 export const techStack: SkillItem[] = [
   { name: "Laravel", level: "Advanced", icon: "/icons/laravel.jpg" },
-  { name: "Next.js", level: "Beginner", icon: "/icons/nextjs.png" },
-  { name: "React", level: "Beginner", icon: "/icons/react.png" },
-  { name: "TypeScript", level: "Beginner", icon: "/icons/typescript.png" },
+  { name: "Next.js", level: "Intermediate", icon: "/icons/nextjs.png" },
+  { name: "React", level: "Intermediate", icon: "/icons/react.png" },
+  { name: "TypeScript", level: "Intermediate", icon: "/icons/typescript.png" },
   { name: "JavaScript", level: "Advanced", icon: "/icons/js.png" },
   { name: "PHP", level: "Advanced", icon: "/icons/php.jpg" },
   { name: "Go", level: "Beginner", icon: "/icons/go.png" },
@@ -56,12 +57,14 @@ export const techStack: SkillItem[] = [
   { name: "Docker", level: "Beginner", icon: "/icons/docker.jpg" },
   { name: "Tailwind CSS", level: "Advanced", icon: "/icons/tailwind.jpg" },
   { name: "Linux", level: "Intermediate", icon: "/icons/linux.jpg" },
+  { name: "Flutter", level: "Intermediate", icon: "/icons/flutter.jpg" },
 ];
 
 export const projects: ProjectItem[] = [
   {
     slug: "stockify",
     title: "Stockify",
+    status: "completed",
     type: {
       en: "Inventory Management System",
       id: "Sistem Manajemen Inventori",
@@ -124,6 +127,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "ukk",
     title: "UKK",
+    status: "completed",
     type: {
       en: "School Management System",
       id: "Sistem Manajemen Sekolah",
@@ -186,6 +190,7 @@ export const projects: ProjectItem[] = [
   {
     slug: "cars-arena",
     title: "Cars Arena",
+    status: "in-development",
     type: {
       en: "Car Marketplace Platform",
       id: "Platform Marketplace Mobil",
@@ -255,46 +260,46 @@ export const experiences: ExperienceItem[] = [
   {
     year: "2023 - 2025",
     role: {
-      en: "School-Based Web Development Learning",
-      id: "Pembelajaran Web Development di Sekolah",
+      en: "Software Engineering — Vocational High School",
+      id: "Rekayasa Perangkat Lunak (RPL) — Sekolah Menengah Kejuruan",
     },
     place: {
-      en: "School",
-      id: "Sekolah",
+      en: "State Vocational School 1 Bantul",
+      id: "SMKN 1 Bantul",
     },
     details: {
-      en: "Studied web development at school, including programming fundamentals, database concepts, and project-based practice.",
-      id: "Mempelajari web development di sekolah, mencakup dasar pemrograman, konsep database, dan praktik berbasis proyek.",
+      en: "Pursued studies in Software Engineering, learning the fundamentals of programming, web development, databases, and the software development lifecycle as a foundation for a career in technology.",
+      id: "Menempuh pendidikan di jurusan Rekayasa Perangkat Lunak, mempelajari dasar-dasar pemrograman, pengembangan web, basis data, dan siklus pengembangan perangkat lunak sebagai fondasi awal karier di bidang teknologi.",
     },
   },
   {
     year: "2025 - 2026",
     role: {
-      en: "Intern at Seven Inc",
-      id: "Magang di Seven Inc",
+      en: "Programming Intern — Seven Inc.",
+      id: "Programmer Magang — Seven Inc.",
     },
     place: {
       en: "Seven Inc",
       id: "Seven Inc",
     },
     details: {
-      en: "Completed internship by contributing to company projects, supporting web feature development, and collaborating with the engineering team.",
-      id: "Menjalani program magang dengan berkontribusi pada proyek perusahaan, membantu pengembangan fitur web, dan berkolaborasi dengan tim engineering.",
+      en: "Completed a software developer internship, contributing to application development using technologies such as Laravel, Next.js, and React, while gaining practical experience within a professional development team.",
+      id: "Menjalani program magang sebagai pengembang perangkat lunak, berkontribusi dalam pengembangan aplikasi menggunakan teknologi seperti Laravel, Next.js, dan React, serta memperdalam praktik kerja dalam tim pengembangan profesional.",
     },
   },
   {
     year: "2026 - Present",
     role: {
-      en: "Full Stack Developer",
-      id: "Full Stack Developer",
+      en: "Freelance & Personal Project Development",
+      id: "Freelance & Pengembangan Proyek Pribadi",
     },
     place: {
-      en: "Freelance & Independent Projects",
-      id: "Freelance & Proyek Mandiri",
+      en: "Anywhere",
+      id: "Di Mana Saja",
     },
     details: {
-      en: "Developing scalable web apps with modern backend architecture and highly interactive frontend experiences.",
-      id: "Mengembangkan aplikasi web yang skalabel dengan arsitektur backend modern dan pengalaman frontend yang interaktif.",
+      en: "Actively working as a freelance developer while continuing to develop personal projects to deepen technical expertise in web and mobile development, including exploring new technologies such as Go and Next.js.",
+      id: "Aktif bekerja sebagai freelance developer sambil terus mengembangkan personal project untuk memperdalam keahlian teknis di bidang web dan mobile development, termasuk eksplorasi teknologi baru seperti Go dan Next.js.",
     },
   },
 ];

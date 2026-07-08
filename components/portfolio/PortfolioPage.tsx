@@ -29,7 +29,7 @@ const copy = {
       headline: "Building Digital Experiences That Matter",
       greeting: "Hi, I'm",
       description:
-        "I build secure, scalable, and high-performance web applications using Laravel, Next.js, TypeScript, Go, and modern cloud-ready development practices.",
+        "I specialize in building secure and scalable web applications with Laravel, complemented by front-end development using Next.js and React, mobile development with Flutter, and I'm expanding my backend skills with Go.",
       lead: "Crafting elegant solutions with modern technologies and strong product thinking.",
       viewProjects: "View Projects",
       github: "GitHub",
@@ -41,13 +41,13 @@ const copy = {
         "I'm a Full Stack Developer focused on creating reliable and elegant web platforms. I enjoy translating real business problems into practical software solutions with clean code, thoughtful architecture, and delightful user experience.",
       education: "Education",
       educationText:
-        "Software engineering focused curriculum with web systems specialization.",
+        "Graduated from a Software Engineering (RPL) program with a focus on web-based systems, covering programming fundamentals, database design, and the full software development lifecycle.",
       timeline: "Timeline",
       timelineText:
-        "Started with backend foundations, expanded into modern frontend and DevOps workflows.",
+        "Started with backend foundations during my studies, gained hands-on industry experience as a developer intern at Seven Inc., and am now expanding into freelance work while building personal projects across web and mobile.",
       objective: "Career Objective",
       objectiveText:
-        "Deliver impactful products as a future-ready engineer with strong product sense.",
+        "Currently freelancing and actively developing personal projects to deepen my technical skills, with the goal of becoming a product-minded, future-ready engineer who delivers real impact.",
       statProjects: "Projects Completed",
       statTech: "Technologies Learned",
       statLearning: "Years of Learning",
@@ -71,6 +71,7 @@ const copy = {
       certificatesTitle: "Validated learning and professional development",
       contact: "Contact",
       contactTitle: "Let's build something exceptional together",
+      completed: "Completed",
       inDevelopment: "In Development",
       moreDetails: "More Details",
       available:
@@ -98,7 +99,7 @@ const copy = {
       headline: "Membangun Pengalaman Digital yang Bermakna",
       greeting: "Halo, saya",
       description:
-        "Saya membangun aplikasi web yang aman, scalable, dan berperforma tinggi menggunakan Laravel, Next.js, TypeScript, Go, serta praktik pengembangan modern yang siap cloud.",
+        "Saya memiliki spesialisasi dalam membangun aplikasi web yang aman dan dapat dikembangkan (scalable) menggunakan Laravel, didukung oleh pengembangan front-end dengan Next.js dan React serta pengembangan aplikasi mobile dengan Flutter, sembari terus memperluas keahlian backend saya menggunakan Go.",
       lead:
         "Merancang solusi elegan dengan teknologi modern dan product thinking yang kuat.",
       viewProjects: "Lihat Proyek",
@@ -111,13 +112,13 @@ const copy = {
         "Saya seorang Full Stack Developer yang fokus membangun platform web yang andal dan elegan. Saya senang menerjemahkan masalah bisnis nyata menjadi solusi software yang praktis dengan kode bersih, arsitektur matang, dan pengalaman pengguna yang nyaman.",
       education: "Pendidikan",
       educationText:
-        "Kurikulum berfokus rekayasa perangkat lunak dengan spesialisasi sistem web.",
+        "Lulusan program Rekayasa Perangkat Lunak (RPL) dengan fokus pada sistem berbasis web, yang mencakup dasar-dasar pemrograman, perancangan basis data, dan seluruh siklus hidup pengembangan perangkat lunak.",
       timeline: "Perjalanan",
       timelineText:
-        "Memulai dari fondasi backend, lalu berkembang ke frontend modern dan alur DevOps.",
+        "Memulai dengan dasar-dasar backend saat masa studi, memperoleh pengalaman industri praktis sebagai pengembang magang di Seven Inc., dan kini merambah ke pekerjaan lepas sembari mengembangkan proyek pribadi di ranah web dan seluler.",
       objective: "Tujuan Karier",
       objectiveText:
-        "Menghadirkan produk berdampak sebagai engineer yang siap masa depan dengan product sense yang kuat.",
+        "Saat ini bekerja secara lepas dan aktif mengembangkan proyek pribadi untuk memperdalam keterampilan teknis, dengan tujuan menjadi insinyur yang berorientasi pada produk, siap menghadapi masa depan, dan mampu memberikan dampak nyata.",
       statProjects: "Proyek Selesai",
       statTech: "Teknologi Dipelajari",
       statLearning: "Tahun Belajar",
@@ -141,6 +142,7 @@ const copy = {
       certificatesTitle: "Validasi pembelajaran dan pengembangan profesional",
       contact: "Kontak",
       contactTitle: "Mari bangun sesuatu yang luar biasa bersama",
+      completed: "Selesai",
       inDevelopment: "Sedang Dikembangkan",
       moreDetails: "Selengkapnya",
       available: "Tersedia untuk proyek freelance dan peluang full-time.",
@@ -377,7 +379,11 @@ export function PortfolioPage() {
                       <h4>{project.title}</h4>
                       <p>{textByLanguage(project.type, language)}</p>
                     </div>
-                    <span className="status-badge">{t.sections.inDevelopment}</span>
+                    <span className="status-badge">
+                      {project.status === "completed"
+                        ? t.sections.completed
+                        : t.sections.inDevelopment}
+                    </span>
                   </div>
 
                   <p className="project-description">
