@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10203d"/>
+      <stop offset="100%" stop-color="#07101b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7ab3ff"/>
+      <stop offset="100%" stop-color="#d3e6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <rect x="78" y="80" width="804" height="480" rx="28" fill="#0d1627" stroke="#7aa6f1" stroke-opacity="0.22"/>
+  <rect x="118" y="130" width="210" height="360" rx="22" fill="#13213a"/>
+  <rect x="366" y="130" width="210" height="360" rx="22" fill="#13213a"/>
+  <rect x="614" y="130" width="210" height="360" rx="22" fill="#13213a"/>
+  <circle cx="223" cy="190" r="48" fill="url(#accent)" fill-opacity="0.18"/>
+  <circle cx="471" cy="190" r="48" fill="url(#accent)" fill-opacity="0.18"/>
+  <circle cx="719" cy="190" r="48" fill="url(#accent)" fill-opacity="0.18"/>
+  <rect x="146" y="286" width="154" height="16" rx="8" fill="#edf4ff" fill-opacity="0.3"/>
+  <rect x="394" y="286" width="154" height="16" rx="8" fill="#edf4ff" fill-opacity="0.3"/>
+  <rect x="642" y="286" width="154" height="16" rx="8" fill="#edf4ff" fill-opacity="0.3"/>
+  <rect x="146" y="338" width="114" height="12" rx="6" fill="#7aa6f1"/>
+  <rect x="394" y="338" width="126" height="12" rx="6" fill="#7aa6f1"/>
+  <rect x="642" y="338" width="104" height="12" rx="6" fill="#7aa6f1"/>
+  <text x="120" y="564" fill="#edf4ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Role based access</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1830"/>
+      <stop offset="100%" stop-color="#07101b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f97ff"/>
+      <stop offset="100%" stop-color="#9bc4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <rect x="76" y="70" width="808" height="500" rx="28" fill="#0d1627" stroke="#7aa6f1" stroke-opacity="0.22"/>
+  <rect x="114" y="116" width="328" height="404" rx="20" fill="#111d32"/>
+  <rect x="486" y="116" width="360" height="154" rx="20" fill="#111d32"/>
+  <rect x="486" y="286" width="360" height="234" rx="20" fill="#111d32"/>
+  <rect x="144" y="150" width="208" height="14" rx="7" fill="url(#accent)"/>
+  <rect x="144" y="202" width="250" height="22" rx="11" fill="#182746"/>
+  <rect x="144" y="246" width="198" height="22" rx="11" fill="#182746"/>
+  <rect x="144" y="290" width="280" height="22" rx="11" fill="#182746"/>
+  <rect x="144" y="334" width="224" height="22" rx="11" fill="#182746"/>
+  <rect x="144" y="378" width="292" height="22" rx="11" fill="#182746"/>
+  <circle cx="580" cy="182" r="36" fill="#4f97ff" fill-opacity="0.22"/>
+  <rect x="646" y="150" width="128" height="14" rx="7" fill="#edf4ff" fill-opacity="0.3"/>
+  <rect x="646" y="178" width="88" height="12" rx="6" fill="#7aa6f1"/>
+  <rect x="520" y="338" width="248" height="120" rx="18" fill="#172742"/>
+  <rect x="548" y="366" width="182" height="14" rx="7" fill="url(#accent)"/>
+  <rect x="548" y="404" width="132" height="12" rx="6" fill="#edf4ff" fill-opacity="0.28"/>
+  <text x="118" y="556" fill="#edf4ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Purchase flow and reports</text>
+</svg>

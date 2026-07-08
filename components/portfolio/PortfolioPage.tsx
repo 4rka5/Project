@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Link from "next/link";
 import {
   certificates,
   experiences,
@@ -71,7 +72,7 @@ const copy = {
       contact: "Contact",
       contactTitle: "Let's build something exceptional together",
       inDevelopment: "In Development",
-      liveDemo: "Live Demo",
+      moreDetails: "More Details",
       available:
         "Available for freelance projects and full-time opportunities.",
       buildTogether: "Let's Build Something Together",
@@ -141,7 +142,7 @@ const copy = {
       contact: "Kontak",
       contactTitle: "Mari bangun sesuatu yang luar biasa bersama",
       inDevelopment: "Sedang Dikembangkan",
-      liveDemo: "Demo Langsung",
+      moreDetails: "Selengkapnya",
       available: "Tersedia untuk proyek freelance dan peluang full-time.",
       buildTogether: "Mari Bangun Sesuatu Bersama",
       startConversation: "Mulai Percakapan",
@@ -358,7 +359,16 @@ export function PortfolioPage() {
             {projects.map((project) => (
               <article key={project.title} className="glass-card project-card">
                 <div className="project-preview" aria-hidden="true">
-                  <div className="project-preview-inner">{project.title}</div>
+                  <div className="project-preview-inner">
+                    <Image
+                      src={project.coverImage}
+                      alt=""
+                      fill
+                      sizes="(max-width: 860px) 100vw, 430px"
+                      className="project-preview-image"
+                    />
+                    <div className="project-preview-label">{project.title}</div>
+                  </div>
                 </div>
 
                 <div className="project-content">
@@ -388,9 +398,9 @@ export function PortfolioPage() {
                     >
                       GitHub
                     </a>
-                    <a href="#" aria-disabled>
-                      {t.sections.liveDemo}
-                    </a>
+                    <Link href={`/projects/${project.slug}`}>
+                      {t.sections.moreDetails}
+                    </Link>
                   </div>
                 </div>
               </article>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18253d"/>
+      <stop offset="100%" stop-color="#07101b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ca0ff"/>
+      <stop offset="100%" stop-color="#d3e6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <rect x="60" y="70" width="840" height="500" rx="28" fill="#0d1627" stroke="#7aa6f1" stroke-opacity="0.2"/>
+  <rect x="110" y="114" width="740" height="64" rx="18" fill="#111d31"/>
+  <circle cx="154" cy="146" r="14" fill="url(#accent)"/>
+  <rect x="196" y="136" width="180" height="16" rx="8" fill="#d8e7ff" fill-opacity="0.34"/>
+  <rect x="110" y="210" width="220" height="300" rx="22" fill="#111d31"/>
+  <rect x="354" y="210" width="220" height="300" rx="22" fill="#111d31"/>
+  <rect x="598" y="210" width="252" height="300" rx="22" fill="#111d31"/>
+  <rect x="138" y="242" width="164" height="14" rx="7" fill="url(#accent)"/>
+  <rect x="138" y="286" width="150" height="12" rx="6" fill="#d8e7ff" fill-opacity="0.28"/>
+  <rect x="138" y="318" width="122" height="12" rx="6" fill="#d8e7ff" fill-opacity="0.2"/>
+  <rect x="382" y="242" width="164" height="14" rx="7" fill="url(#accent)"/>
+  <rect x="382" y="286" width="150" height="12" rx="6" fill="#d8e7ff" fill-opacity="0.28"/>
+  <rect x="382" y="318" width="122" height="12" rx="6" fill="#d8e7ff" fill-opacity="0.2"/>
+  <text x="626" y="262" fill="#edf4ff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Search</text>
+  <text x="626" y="298" fill="#a6c0ea" font-family="Inter, Arial, sans-serif" font-size="16">Filters, sort, compare</text>
+  <rect x="626" y="334" width="182" height="16" rx="8" fill="#182746"/>
+  <rect x="626" y="370" width="136" height="16" rx="8" fill="#182746"/>
+  <text x="120" y="556" fill="#edf4ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Smart search and filters</text>
+</svg>

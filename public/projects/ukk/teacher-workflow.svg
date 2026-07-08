@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2140"/>
+      <stop offset="100%" stop-color="#07101c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ca0ff"/>
+      <stop offset="100%" stop-color="#b9d5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" rx="36" fill="url(#bg)"/>
+  <rect x="60" y="70" width="840" height="500" rx="28" fill="#0d1627" stroke="#7aa6f1" stroke-opacity="0.2"/>
+  <rect x="100" y="112" width="226" height="418" rx="22" fill="#111d31"/>
+  <rect x="354" y="112" width="446" height="418" rx="22" fill="#111d31"/>
+  <circle cx="214" cy="194" r="54" fill="url(#accent)" fill-opacity="0.18"/>
+  <rect x="146" y="286" width="136" height="14" rx="7" fill="#d8e7ff" fill-opacity="0.3"/>
+  <rect x="146" y="320" width="112" height="12" rx="6" fill="#7aa6f1"/>
+  <rect x="390" y="160" width="252" height="18" rx="9" fill="url(#accent)"/>
+  <rect x="390" y="214" width="302" height="16" rx="8" fill="#d8e7ff" fill-opacity="0.25"/>
+  <rect x="390" y="256" width="212" height="16" rx="8" fill="#d8e7ff" fill-opacity="0.2"/>
+  <rect x="390" y="330" width="338" height="54" rx="16" fill="#182746"/>
+  <rect x="390" y="402" width="276" height="54" rx="16" fill="#182746"/>
+  <text x="118" y="556" fill="#edf4ff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Teacher workflow</text>
+</svg>
