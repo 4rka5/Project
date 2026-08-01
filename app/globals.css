@@ -403,65 +403,41 @@ a {
 .skills-grid {
   margin-top: 1.8rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.tech-card {
+.skill-group-card {
   border-radius: var(--radius);
-  padding: 1.05rem;
+  padding: 1.1rem;
   transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.3s ease;
 }
 
-.tech-card:hover {
+.skill-group-card:hover {
   border-color: rgba(88, 151, 255, 0.62);
   box-shadow: 0 16px 30px rgba(10, 30, 69, 0.5);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-.tech-icon {
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  background: rgba(59, 130, 246, 0.14);
-  border: 1px solid rgba(117, 170, 255, 0.38);
-  color: #d5e5ff;
+.skill-group-title {
+  font-size: 1.08rem;
+  margin-bottom: 0.8rem;
 }
 
-.tech-icon-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+.skill-name-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.tech-card h4 {
-  margin-top: 0.75rem;
-  font-size: 1.02rem;
-}
-
-.tech-card p {
-  color: #9ab0d0;
-  font-size: 0.88rem;
-}
-
-.skill-meter {
-  margin-top: 0.75rem;
-  width: 100%;
-  height: 8px;
+.skill-name-chip {
   border-radius: 999px;
-  background: rgba(124, 148, 188, 0.24);
-}
-
-.skill-meter span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #4f97ff, #95c1ff);
+  border: 1px solid rgba(126, 153, 201, 0.36);
+  padding: 0.3rem 0.68rem;
+  color: #cfe0fa;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  background: rgba(18, 30, 48, 0.48);
 }
 
 .projects-grid {
@@ -842,7 +818,7 @@ a {
   border-radius: 20px;
   padding: 1.35rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
 }
 
@@ -1061,3 +1037,4 @@ a {
     flex: 1 1 100%;
   }
 }
+

@@ -16,6 +16,12 @@ export interface ProjectFeatureItem {
   image: string;
 }
 
+export interface ProjectGalleryItem {
+  title: LocalizedText;
+  description?: LocalizedText;
+  images: string[];
+}
+
 export interface ProjectItem {
   slug: string;
   title: string;
@@ -29,6 +35,7 @@ export interface ProjectItem {
   github: string;
   coverImage: string;
   features: ProjectFeatureItem[];
+  gallery?: ProjectGalleryItem[];
 }
 
 export interface ExperienceItem {
@@ -60,6 +67,99 @@ export const techStack: SkillItem[] = [
   { name: "Flutter", level: "Intermediate", icon: "/icons/flutter.jpg" },
 ];
 
+const localized = (text: string): LocalizedText => ({
+  en: text,
+  id: text,
+});
+
+const galleryGroup = (title: string, images: string[]): ProjectGalleryItem => ({
+  title: localized(title),
+  images,
+});
+
+const stockifyGallery: ProjectGalleryItem[] = [
+  galleryGroup("Authentication", [
+    "/projects/stockify/auth/login.png",
+    "/projects/stockify/auth/register.png",
+    "/projects/stockify/auth/forgot.png",
+    "/projects/stockify/auth/success.png",
+  ]),
+  galleryGroup("Admin", [
+    "/projects/stockify/Admin/Dashboard_1.png",
+    "/projects/stockify/Admin/Dashboard_2.png",
+    "/projects/stockify/Admin/Approval_Produk.png",
+    "/projects/stockify/Admin/Activity_Logs.png",
+    "/projects/stockify/Admin/Edit_kategori_1.png",
+    "/projects/stockify/Admin/Edit_Kategori.png",
+    "/projects/stockify/Admin/Edit_Produk_1.png",
+    "/projects/stockify/Admin/Edit_Produk_2.png",
+    "/projects/stockify/Admin/Edit_Template_Atribut.png",
+    "/projects/stockify/Admin/Edit_Transaksi_Stok.png",
+    "/projects/stockify/Admin/Jendela_Notifikasi.png",
+    "/projects/stockify/Admin/Laporan_1.png",
+    "/projects/stockify/Admin/Laporan_2.png",
+    "/projects/stockify/Admin/Laporan_3.png",
+    "/projects/stockify/Admin/Laporan_4.png",
+    "/projects/stockify/Admin/Laporan_Stok.png",
+    "/projects/stockify/Admin/Manajemen_Kategori.png",
+    "/projects/stockify/Admin/Manajemen_Produk.png",
+    "/projects/stockify/Admin/Manajemen_Supplier.png",
+    "/projects/stockify/Admin/Notifikasi.png",
+    "/projects/stockify/Admin/Pengaturan_1.png",
+    "/projects/stockify/Admin/Pengaturan_2.png",
+    "/projects/stockify/Admin/Manajemen_Stok.png",
+    "/projects/stockify/Admin/Manajemen_User.png",
+    "/projects/stockify/Admin/Detail_Transaksi_Stok.png",
+    "/projects/stockify/Admin/Detail_Pengajuan_Approval.png",
+    "/projects/stockify/Admin/Detail_Notifikasi.png",
+  ]),
+  galleryGroup("Manajer", [
+    "/projects/stockify/Manajer/Dashboard.png",
+    "/projects/stockify/Manajer/Approval Tugas Staff.png",
+    "/projects/stockify/Manajer/Ajukan Produk 1.png",
+    "/projects/stockify/Manajer/Ajukan Produk 2.png",
+    "/projects/stockify/Manajer/Buat Tugas.png",
+    "/projects/stockify/Manajer/Daftar Produk.png",
+    "/projects/stockify/Manajer/Daftar Suplier.png",
+    "/projects/stockify/Manajer/Detail Approval Tugas Staff.png",
+    "/projects/stockify/Manajer/Detail Notifikasi.png",
+    "/projects/stockify/Manajer/Detail Produk 1.png",
+    "/projects/stockify/Manajer/Detail Produk 2.png",
+    "/projects/stockify/Manajer/Detail Transaksi.png",
+    "/projects/stockify/Manajer/Jendela Notifikasi.png",
+    "/projects/stockify/Manajer/Laporan Stok 1.png",
+    "/projects/stockify/Manajer/Laporan Stok 2.png",
+    "/projects/stockify/Manajer/Monitor Stok.png",
+    "/projects/stockify/Manajer/Notifikasi.png",
+    "/projects/stockify/Manajer/Profil.png",
+    "/projects/stockify/Manajer/Riwayat Transaksi.png",
+    "/projects/stockify/Manajer/Stok Keluar.png",
+    "/projects/stockify/Manajer/Stok Masuk.png",
+    "/projects/stockify/Manajer/Stok Opname.png",
+  ]),
+  galleryGroup("Staff", [
+    "/projects/stockify/Staff/Dashboard 1.png",
+    "/projects/stockify/Staff/Dashboard 2.png",
+    "/projects/stockify/Staff/Barang Keluar 1.png",
+    "/projects/stockify/Staff/Barang Keluar 2.png",
+    "/projects/stockify/Staff/Barang Masuk 1.png",
+    "/projects/stockify/Staff/Barang Masuk 2.png",
+    "/projects/stockify/Staff/Cek Stok Barang 1.png",
+    "/projects/stockify/Staff/Cek Stok Barang 2.png",
+    "/projects/stockify/Staff/Daftar Produk 1.png",
+    "/projects/stockify/Staff/Daftar Produk 2.png",
+    "/projects/stockify/Staff/Detail Notifikasi.png",
+    "/projects/stockify/Staff/Detail Produk.png",
+    "/projects/stockify/Staff/Detail Transaksi.png",
+    "/projects/stockify/Staff/Jendela Notifikasi.png",
+    "/projects/stockify/Staff/Notifikasi.png",
+    "/projects/stockify/Staff/Profil.png",
+    "/projects/stockify/Staff/Riwayat Transaksi.png",
+    "/projects/stockify/Staff/Stock Opname 1.png",
+    "/projects/stockify/Staff/Stok Opname 2.png",
+  ]),
+];
+
 export const projects: ProjectItem[] = [
   {
     slug: "stockify",
@@ -87,7 +187,8 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Laravel", "PHP", "MySQL"],
     github: "https://github.com/4rka5/Stockify",
-    coverImage: "/projects/stockify/cover.svg",
+    coverImage: "/projects/stockify/auth/login.png",
+    gallery: stockifyGallery,
     features: [
       {
         title: {
@@ -148,7 +249,7 @@ export const projects: ProjectItem[] = [
       en: "The system combines academic administration, attendance, and role-specific workflows in one structured interface for daily use.",
       id: "Sistem ini menggabungkan administrasi akademik, absensi, dan alur kerja spesifik per peran dalam satu antarmuka terstruktur untuk penggunaan harian.",
     },
-    stack: ["Laravel", "PHP", "MySQL"],
+    stack: ["Laravel", "PHP", "MySQL", "Flutter"],
     github: "https://github.com/4rka5/UKK",
     coverImage: "/projects/ukk/cover.svg",
     features: [
@@ -211,7 +312,7 @@ export const projects: ProjectItem[] = [
       en: "I built a marketplace layout with search, dealer profiles, and listing modules that keep discovery and sales intent connected.",
       id: "Saya membangun tata letak marketplace dengan pencarian, profil dealer, dan modul listing yang menjaga penemuan produk dan niat penjualan tetap terhubung.",
     },
-    stack: ["Laravel", "PHP", "MySQL"],
+    stack: ["Laravel", "PHP", "MySQL", "Flutter"],
     github: "https://github.com/4rka5/Cars-Arena",
     coverImage: "/projects/cars-arena/cover.svg",
     features: [

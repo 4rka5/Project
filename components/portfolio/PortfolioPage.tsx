@@ -156,18 +156,6 @@ const copy = {
   },
 } as const;
 
-function getSkillMeterWidth(level: string) {
-  if (level === "Advanced") {
-    return "86%";
-  }
-
-  if (level === "Intermediate") {
-    return "68%";
-  }
-
-  return "46%";
-}
-
 function textByLanguage(text: LocalizedText, language: Language) {
   return text[language];
 }
@@ -175,6 +163,45 @@ function textByLanguage(text: LocalizedText, language: Language) {
 export function PortfolioPage() {
   const { language, toggleLanguage } = useLanguage();
   const t = copy[language];
+
+  const groupedSkills = useMemo(() => {
+    const groups = [
+      {
+        key: "frontend",
+        title: "Frontend",
+        names: new Set<string>(),
+        matcher: new Set(["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "Flutter"]),
+      },
+      {
+        key: "backend",
+        title: "Backend",
+        names: new Set<string>(),
+        matcher: new Set(["Laravel", "PHP", "Go", "MySQL"]),
+      },
+      {
+        key: "other",
+        title: "Other",
+        names: new Set<string>(),
+        matcher: new Set(["Git", "Docker", "Linux"]),
+      },
+    ];
+
+    for (const tech of techStack) {
+      const matchedGroup = groups.find((group) => group.matcher.has(tech.name));
+
+      if (matchedGroup) {
+        matchedGroup.names.add(tech.name);
+      } else {
+        groups[2].names.add(tech.name);
+      }
+    }
+
+    return groups.map((group) => ({
+      key: group.key,
+      title: group.title,
+      skills: Array.from(group.names),
+    }));
+  }, []);
 
   const localizedNavLinks = useMemo(
     () =>
@@ -325,25 +352,15 @@ export function PortfolioPage() {
           </div>
 
           <div className="skills-grid fade-up delay-1">
-            {techStack.map((tech) => (
-              <article key={tech.name} className="glass-card tech-card">
-                <div className="tech-icon">
-                  <Image
-                    src={tech.icon}
-                    alt={`${tech.name} icon`}
-                    width={26}
-                    height={26}
-                    className="tech-icon-image"
-                  />
-                </div>
-                <h4>{tech.name}</h4>
-                <p>{t.skills.levels[tech.level]}</p>
-                <div className="skill-meter">
-                  <span
-                    style={{
-                      width: getSkillMeterWidth(tech.level),
-                    }}
-                  />
+            {groupedSkills.map((group) => (
+              <article key={group.key} className="glass-card skill-group-card">
+                <h4 className="skill-group-title">{group.title}</h4>
+                <div className="skill-name-list">
+                  {group.skills.map((skillName) => (
+                    <span key={skillName} className="skill-name-chip">
+                      {skillName}
+                    </span>
+                  ))}
                 </div>
               </article>
             ))}
@@ -464,12 +481,6 @@ export function PortfolioPage() {
             <a href={profileConfig.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a href={profileConfig.linkedIn} target="_blank" rel="noopener noreferrer">
-              LinkedIn
-            </a>
-            <a href={profileConfig.whatsapp} target="_blank" rel="noopener noreferrer">
-              WhatsApp
-            </a>
           </article>
 
           <article className="glass-card cta-band fade-up delay-1">
@@ -489,9 +500,6 @@ export function PortfolioPage() {
         <div>
           <a href={profileConfig.github} target="_blank" rel="noopener noreferrer">
             GitHub
-          </a>
-          <a href={profileConfig.linkedIn} target="_blank" rel="noopener noreferrer">
-            LinkedIn
           </a>
           <a href={`mailto:${profileConfig.email}`}>{t.footer.email}</a>
         </div>
