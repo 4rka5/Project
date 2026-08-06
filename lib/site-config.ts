@@ -20,6 +20,6 @@ export const profileConfig = {
   github: "https://github.com/4rka5",
   linkedIn: "https://linkedin.com/",
   whatsapp: "https://wa.me/+62",
-  cvPath: "/cv-arka-satria.pdf",
+  cvPath: "/CV_ARKA_SATRIA_PRATAMA.pdf",
 }  as const;
 
