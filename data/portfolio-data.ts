@@ -49,6 +49,8 @@ export interface CertificateItem {
   title: LocalizedText;
   issuer: LocalizedText;
   year: string;
+  downloadUrl?: string;
+  previewImage?: string;
 }
 
 export const techStack: SkillItem[] = [
@@ -214,6 +216,27 @@ const ukkGallery: ProjectGalleryItem[] = [
   ]),
 ];
 
+const carsArenaGallery: ProjectGalleryItem[] = [
+  galleryGroup("Home", [
+    "/projects/cars-arena/Beranda/Screenshot_2026-08-23_203538.png",
+    "/projects/cars-arena/Beranda/Screenshot_2026-08-23_203551.png",
+    "/projects/cars-arena/Beranda/Screenshot_2026-08-23_203613.png",
+  ]),
+  galleryGroup("Information", [
+    "/projects/cars-arena/Screenshot_2026-08-23_203634.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203647.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203657.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203708.png",
+  ]),
+  galleryGroup("Listings & Details", [
+    "/projects/cars-arena/Screenshot_2026-08-23_203729.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203754.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203807.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203835.png",
+    "/projects/cars-arena/Screenshot_2026-08-23_203852.png",
+  ]),
+];
+
 export const projects: ProjectItem[] = [
   {
     slug: "stockify",
@@ -369,7 +392,8 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Laravel", "PHP", "MySQL", "Flutter"],
     github: "https://github.com/4rka5/Cars-Arena",
-    coverImage: "/projects/cars-arena/cover.svg",
+    coverImage: "/projects/cars-arena/Beranda/Screenshot_2026-08-23_203538.png",
+    gallery: carsArenaGallery,
     features: [
       {
         title: {
@@ -380,7 +404,7 @@ export const projects: ProjectItem[] = [
           en: "Helps buyers narrow down car options quickly based on key marketplace criteria.",
           id: "Membantu pembeli menyaring pilihan mobil dengan cepat berdasarkan kriteria utama marketplace.",
         },
-        image: "/projects/cars-arena/search.svg",
+        image: "/projects/cars-arena/Screenshot_2026-08-23_203634.png",
       },
       {
         title: {
@@ -391,7 +415,7 @@ export const projects: ProjectItem[] = [
           en: "Gives sellers a stronger identity with structured profile pages and trust-building information.",
           id: "Memberi penjual identitas yang lebih kuat dengan halaman profil terstruktur dan informasi yang membangun kepercayaan.",
         },
-        image: "/projects/cars-arena/dealer.svg",
+        image: "/projects/cars-arena/Screenshot_2026-08-23_203657.png",
       },
       {
         title: {
@@ -402,7 +426,7 @@ export const projects: ProjectItem[] = [
           en: "Creates a cleaner flow for users who want to contact sellers or request more information.",
           id: "Menciptakan alur yang lebih rapi untuk pengguna yang ingin menghubungi penjual atau meminta informasi lebih lanjut.",
         },
-        image: "/projects/cars-arena/leads.svg",
+        image: "/projects/cars-arena/Screenshot_2026-08-23_203708.png",
       },
     ],
   },
@@ -463,35 +487,28 @@ export const experiences: ExperienceItem[] = [
 export const certificates: CertificateItem[] = [
   {
     title: {
-      en: "Full Stack Web Development",
-      id: "Full Stack Web Development",
+      en: "Internship Certificate",
+      id: "Sertifikat Magang",
     },
     issuer: {
-      en: "Professional Learning Platform",
-      id: "Platform Pembelajaran Profesional",
+      en: "Jogja.AI Internship Program",
+      id: "Program Magang Jogja.AI",
     },
     year: "2025",
+    downloadUrl: "/Sertifikat_Arka_Satria_Pratama.pdf",
+    previewImage: "/sertifikat_preview/sertifikat_1.png",
   },
   {
     title: {
-      en: "Advanced Laravel Architecture",
-      id: "Arsitektur Laravel Lanjutan",
+      en: "Dart Programming Basics",
+      id: "Memulai Pemrograman dengan Dart",
     },
     issuer: {
-      en: "Backend Engineering Academy",
-      id: "Akademi Rekayasa Backend",
-    },
-    year: "2025",
-  },
-  {
-    title: {
-      en: "TypeScript & Modern Frontend",
-      id: "TypeScript & Frontend Modern",
-    },
-    issuer: {
-      en: "Frontend Specialist Program",
-      id: "Program Spesialis Frontend",
+      en: "Dicoding Academy",
+      id: "Dicoding Academy",
     },
     year: "2024",
+    downloadUrl: "/sertifikat_course_191_3863983_141124111921.pdf",
+    previewImage: "/sertifikat_preview/sertifikat_2.png",
   },
 ];

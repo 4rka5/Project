@@ -22,18 +22,14 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window === "undefined") {
-      return "en";
-    }
+  const [language, setLanguage] = useState<Language>("en");
 
+  useEffect(() => {
     const savedLanguage = window.localStorage.getItem("portfolio-language");
     if (savedLanguage === "en" || savedLanguage === "id") {
-      return savedLanguage;
+      setLanguage(savedLanguage);
     }
-
-    return "en";
-  });
+  }, []);
 
   useEffect(() => {
     window.localStorage.setItem("portfolio-language", language);

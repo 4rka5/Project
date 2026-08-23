@@ -461,10 +461,30 @@ export function PortfolioPage() {
           <div className="cert-grid fade-up delay-1">
             {certificates.map((cert) => (
               <article key={cert.title.en} className="glass-card cert-card">
-                <div className="cert-preview" aria-hidden="true" />
+                <div className="cert-preview" aria-hidden="true">
+                  {cert.previewImage ? (
+                    <Image
+                      src={cert.previewImage}
+                      alt={textByLanguage(cert.title, language)}
+                      fill
+                      sizes="220px"
+                    />
+                  ) : null}
+                </div>
                 <h4>{textByLanguage(cert.title, language)}</h4>
                 <p>{textByLanguage(cert.issuer, language)}</p>
                 <span>{cert.year}</span>
+                {cert.downloadUrl ? (
+                  <a
+                    href={cert.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-ghost"
+                    style={{ marginTop: "0.75rem", width: "100%" }}
+                  >
+                    {language === "en" ? "Open Certificate" : "Buka Sertifikat"}
+                  </a>
+                ) : null}
               </article>
             ))}
           </div>
