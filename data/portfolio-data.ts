@@ -495,8 +495,8 @@ export const certificates: CertificateItem[] = [
       id: "Program Magang Jogja.AI",
     },
     year: "2025",
-    downloadUrl: "/Sertifikat_Arka_Satria_Pratama.pdf",
-    previewImage: "/sertifikat_preview/sertifikat_1.png",
+    downloadUrl: "/sertifikat/pdf/Sertifikat_Arka_Satria_Pratama.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_1.png",
   },
   {
     title: {
@@ -508,7 +508,59 @@ export const certificates: CertificateItem[] = [
       id: "Dicoding Academy",
     },
     year: "2024",
-    downloadUrl: "/sertifikat_course_191_3863983_141124111921.pdf",
-    previewImage: "/sertifikat_preview/sertifikat_2.png",
+    downloadUrl: "/sertifikat/pdf/sertifikat_course_191_3863983_141124111921.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_2.png",
+  },
+  {
+    title: {
+      en: "Basic Data Science",
+      id: "Dasar Data Science",
+    },
+    issuer: {
+      en: "Dicoding Academy",
+      id: "Dicoding Academy",
+    },
+    year: "2025",
+    downloadUrl: "/sertifikat/pdf/sertifikat_data_science.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_data_science_preview.jpeg",
+  },
+  {
+    title: {
+      en: "Certificate of Industry",
+      id: "Sertifikat Industri",
+    },
+    issuer: {
+      en: "Dicoding Academy",
+      id: "Dicoding Academy",
+    },
+    year: "2025",
+    downloadUrl: "/sertifikat/pdf/Sertifikat_Industri.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_industri_dicoding_preview.jpeg",
+  },
+  {
+    title: {
+      en: "Certificat of Competition Junior Coder",
+      id: "Sertifikat Kompetisi Programer Junior"
+    },
+    issuer: {
+      en: "Badan Nasional Sertifikasi Profesi (BNSP)",
+      id: "Badan Nasional Sertifikasi Profesi (BNSP)",
+    },
+    year: "2026",
+    downloadUrl: "/sertifikat/pdf/sertifikat_kompetensi_1.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_kompetensi_preview_1.jpeg",
+  },
+  {
+    title: {
+      en: "Certificat of Competition Software Engineer",
+      id: "Sertifikat Kompetisi Rekayasa Perangkat Lunak"
+    },
+    issuer: {
+      en: "State Vocational School 1 Bantul",
+      id: "SMK Negeri 1 Bantul",
+    },
+    year: "2026",
+    downloadUrl: "/sertifikat/pdf/sertifikat_kompetensi_2.pdf",
+    previewImage: "/sertifikat/sertifikat_preview/sertifikat_kompetensi_preview_2.jpeg",
   },
 ];
